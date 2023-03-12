@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import {AiFillContacts} from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -5,8 +6,11 @@ import { useLogoutMutation } from "../features/api/authApi";
 import { removeUser } from "../features/services/AuthSlice";
 
 const Navbar = () => {
-  const user = useSelector((state) => state.auth.user)
-  const token = useSelector((state) => state.auth.token)
+  // const user = useSelector((state) => state.auth.user)
+  // const token = useSelector((state) => state.auth.token)
+  const user = JSON.parse(Cookies.get("user"));
+  const token = Cookies.get("token");
+  console.log(user)
   const [logout] = useLogoutMutation();
   const navigate = useNavigate();
   const dispatch = useDispatch();

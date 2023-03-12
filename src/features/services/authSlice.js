@@ -11,8 +11,8 @@ export const authSlice = createSlice({
             // console.log('from rtk this is auth slice',payload);
             state.user = payload.user;
             state.token = payload.token;
-            Cookies.set ("user",JSON.stringify(state.user));
-            Cookies.set("token",state.token)
+            Cookies.set ("user",JSON.stringify(state.user), {expires: 1});
+            Cookies.set("token",state.token, {expires: 1})
         },
         removeUser: (state) => {
             state.user = null,
