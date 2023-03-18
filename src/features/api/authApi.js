@@ -31,8 +31,9 @@ export const authApi = createApi({
             }),
             invalidatesTags: ['Auth']
         }),
+       
 
      })
 })
 
-export const {useRegisterMutation, useLoginMutation, useLogoutMutation} = authApi;
+export const {useRegisterMutation, useLoginMutation, useLogoutMutation, useGetContactsQuery} = authApi;

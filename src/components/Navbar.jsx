@@ -10,7 +10,7 @@ const Navbar = () => {
   // const token = useSelector((state) => state.auth.token)
   const user = JSON.parse(Cookies.get("user"));
   const token = Cookies.get("token");
-  console.log(user)
+  // console.log(user)
   const [logout] = useLogoutMutation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
