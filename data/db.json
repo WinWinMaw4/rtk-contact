@@ -1,0 +1,23 @@
+{
+  "register": [
+    {
+      "id": 1,
+      "name": "john doe",
+      "email": "ex@gmail.com",
+      "password": "password",
+      "passwordConfirm": "password"
+    }
+  ],
+  
+  "login": [{ "id": 1, "email": "ex@gmail.com", "password": "password" }],
+
+  "users": [
+    {
+      "id": 1,
+      "name": "john doe",
+      "email": "ex@gmail.com",
+      "password": "password",
+      "passwordConfirm": "password"
+    }
+  ]
+}
